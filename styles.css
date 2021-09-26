@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
+button {
+	border: none;
+	padding: 0;
+}
+
+html {
+	background: linear-gradient(darkred, grey) no-repeat fixed;
+	height: 100%;
+	width: 100%;
+}
+
+.header{
+	width: 100%;
+	padding: 5px;
+	background: blue;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	font-size: 50px;
+	font-family: 'Palette Mosaic', cursive;
+}
+a {
+ font-size: 1px;
+}
+.title{
+	color: white;
+}
+.contents{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.flip-horizontally {
+  transform: scaleX(-1);
+}
+img {
+	height: 400px;
+}
+.circle {
+	border-radius: 50%;
+}
+
+.nerfdart {
+	height: 7px;
+	position: absolute;
+	animation: fire-nerf-dart 300ms linear,
+						 nerf-dart-bounce 300ms 300ms cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+	top:  400px;
+  left: 399px;
+}
+
+.dart-starting-position {
+	top:  158px;
+  left: 462px;
+}
+@keyframes fire-nerf-dart {
+  from {
+  	left: 259px;
+  }
+
+  to {
+  	top: 158px;
+    left: 462px;
+  }
+}
+@keyframes nerf-dart-bounce {
+  from {
+  	left: 462px;
+  	top: 158px;
+  }
+
+  to {
+  	left: 399px;
+  	top: 400px;
+  }
+}
+
+/*.nerfdart-1 {
+	height: 7px;
+	position: absolute;
+	top: 158px;
+  left: 259px;
+}
+.nerfdart-2 {
+	height: 7px;
+	position: absolute;
+	top: 158px;
+	left: 367px;
+}
+.nerfdart-3 {
+	height: 7px;
+	position: absolute;
+	top: 158px;
+  left: 462px;
+}*/
+.bloodsplatter {
+	transform: scaleX(-1);
+	height: 80px;
+	position: absolute;
+	top: 125px;
+  left: 465px;
+	animation: blood-splatter-effect 50ms;
+	animation-delay: 300ms;
+}
+@keyframes blood-splatter-effect {
+  from {
+  	height: 0px;
+  	visibility: visible;
+  }
+
+  to {
+   height: 80px;
+   visibility: visible;
+  }
+}
+.image-container {
+	position: absolute;
+	margin: 10px;
+}
+.nerf-guy-button {
+	overflow:  hidden;
+	height: 400px;
+	width: 400px;
+}
+.hidden {
+	visibility: hidden;
+}
+.fade {
+	animation: fade-effect 1s;
+	opacity: 0;
+}
+@keyframes fade-effect {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
