@@ -2,6 +2,8 @@ let numberDartLeft = 18;
 
 function fireDart() {
 	if (numberDartLeft > 0) {
+
+		playShotNerfSound();
 	
 		const newDart = document.createElement("img");
 		newDart.src = "./assets/elite-dart.png"
@@ -13,6 +15,7 @@ function fireDart() {
 		bloodSplatterElement.classList.add("bloodsplatter");
 		bloodSplatterElement.classList.add("hidden");
 		setTimeout(function(){
+			playRandomZombieSound()
 			bloodSplatterElement.classList.remove("hidden");
 			newDart.classList.remove("dart-starting-position");
 		}, 300);
@@ -28,13 +31,19 @@ function fireDart() {
 
 		numberDartLeft = numberDartLeft - 1;
 
-	}
+
+
+	} 
+		
+
 
 }
 
 function reload() {
 	console.log("is reloading");
 	numberDartLeft = 18;
+	playReloadSound();
+
 }
 
 document.onkeypress = function (e) {
@@ -46,4 +55,27 @@ document.onkeypress = function (e) {
 		reload()
     } 
 };
+
+function playShotNerfSound(){
+	const audio = new Audio("./assets/nerfshot3.wav");
+
+	audio.play();
+}
+
+function playReloadSound(){
+	const audio = new Audio("./assets/reload.wav");
+
+	audio.play();
+
+}
+function playRandomZombieSound(){
+	const audio = new Audio(`./assets/zombieSound${getRandomNumberBetween(1, 7)}.wav`);
+
+	audio.play();
+
+}
+function getRandomNumberBetween(startingNum, endingNum){
+	var difference = endingNum - startingNum
+	return Math.round((Math.random() * difference) + startingNum, 10);
+}
 

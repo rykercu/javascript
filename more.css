@@ -1,0 +1,54 @@
+:root {
+	--zombie-height: 150px;
+	--grass-height: 200px;
+}
+
+.grass {
+	position: fixed;
+	bottom: 0;
+	height: var(--grass-height);
+	width: 100%;
+	left: 0;
+	background: green;
+}
+.zombie {
+	height: var(--zombie-height);
+	position: fixed;
+	bottom: calc(var(--grass-height) - var(--zombie-height));
+	animation:  zombie-up-down 2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) infinite,
+				zombie-left-right 4s linear infinite;
+
+}
+
+@keyframes zombie-up-down {
+	0% {
+		bottom: calc(var(--grass-height) - var(--zombie-height));
+	}
+	40% {
+		bottom: var(--grass-height);
+	}
+	60% {
+		bottom: var(--grass-height);
+	}
+	100% {
+		bottom: calc(var(--grass-height) - var(--zombie-height));
+	}
+}
+
+@keyframes zombie-left-right {
+	0% {
+		left: 0;
+	} 
+	50% {
+		left: calc(100% - 40px);
+	}
+	100% {
+		left: 0;
+	}
+	
+}
+.scoreLabel {
+	position: fixed;
+	right: 0;
+	margin: 10px;
+}
