@@ -16,7 +16,7 @@
 	position: fixed;
 	bottom: calc(var(--grass-height) - var(--zombie-height));
 	animation:  zombie-up-down 2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) infinite,
-				zombie-left-right 4s linear infinite;
+				zombie-left-right 5s linear infinite;
 
 }
 
