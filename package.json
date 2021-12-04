@@ -1,0 +1,22 @@
+{
+  "name": "the-ultimate-nerf-place",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rykercu/nerf-gun-guy.git"
+  },
+  "author": "Ryker Cutler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rykercu/nerf-gun-guy/issues"
+  },
+  "homepage": "https://github.com/rykercu/nerf-gun-guy#readme",
+  "dependencies": {
+    "date-fns": "^2.27.0"
+  }
+}
