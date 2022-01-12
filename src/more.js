@@ -2,14 +2,12 @@ let score = 0;
 let disableGame = false
 function hitZombie() {
 	if (!disableGame) {	
-		console.log("Testing")
 		const scoreElement = document.querySelector(".score")
-		console.log(scoreElement)
 		score = score + 100;
 		scoreElement.innerHTML = score;
 	}
-	console.log("IT WORRRRRRKS")
 }
+
 let timer = 100;
 const id = setInterval(function(){
 	const timerElement = document.querySelector(".timer")
