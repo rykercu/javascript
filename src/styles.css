@@ -11,7 +11,7 @@ html {
 	width: 100%;
 }
 
-.header{
+.header {
 	width: 100%;
 	padding: 5px;
 	background: blue;
@@ -22,10 +22,11 @@ html {
 	font-size: 50px;
 	font-family: 'Palette Mosaic', cursive;
 }
-a {
- font-size: 1px;
+.secret {
+ font-size: 5px;
+ color: white;
 }
-.title{
+.title {
 	color: white;
 }
 .contents{
